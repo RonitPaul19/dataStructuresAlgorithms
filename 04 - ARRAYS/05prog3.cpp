@@ -1,4 +1,4 @@
-
+//// Program to remove duplicates from a sorted array
 #include<bits/stdc++.h>
 
 using namespace std;

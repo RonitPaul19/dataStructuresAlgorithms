@@ -1,0 +1,1 @@
+//left rotate the array by one place 
