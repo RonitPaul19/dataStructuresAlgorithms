@@ -1,3 +1,4 @@
+//rotate the arrays to left and right by d places 
 #include <iostream>
 using namespace std;
 void RotateRight(int arr[], int n, int k)
