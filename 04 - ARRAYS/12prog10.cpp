@@ -1,4 +1,4 @@
-//find a number that appears once, and othert number twice
+//find a number that appears once, and other numbers twice
 #include <iostream>
 using namespace std;
 
@@ -15,6 +15,7 @@ int main() {
     int n=11;
 
     int ans = findOneTimeAppeared(arr, n);
+    cout<<ans;
 
     return 0;
 }
