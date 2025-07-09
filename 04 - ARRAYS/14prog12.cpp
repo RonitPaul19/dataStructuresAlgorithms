@@ -34,7 +34,11 @@ vector<int> twoSum(vector<int>& nums, int target) {
     return {-1, -1};
 }
 
-//OPTIMAL for variety 1
+//OPTIMAL for variety 1 (not preffered for variety 2) since the array will be changed
+/*
+TC = O(n + n log n)
+SC = O(1)
+*/
 string twoSumReadOptimal(int n, const vector<int> &arr, int target) {
     vector<int> sortedArr = arr;
     sort(sortedArr.begin(), sortedArr.end());
