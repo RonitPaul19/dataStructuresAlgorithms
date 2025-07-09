@@ -1,8 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include<algorithm>
 using namespace std;
 
+//BETTER SOLUTION
 // Check if 2 elements from the array add up to sum "target"
 string read(int n, vector<int> book, int target) {
     map<int, int> mpp;
@@ -32,6 +34,21 @@ vector<int> twoSum(vector<int>& nums, int target) {
     return {-1, -1};
 }
 
+//OPTIMAL for variety 1
+string twoSumReadOptimal(int n, const vector<int> &arr, int target) {
+    vector<int> sortedArr = arr;
+    sort(sortedArr.begin(), sortedArr.end());
+    int left = 0, right = n - 1;
+    while (left < right) {
+        int sum = sortedArr[left] + sortedArr[right];
+        if (sum == target) return "YES";
+        else if (sum < target) left++;
+        else right--;
+    }
+    return "NO";
+}
+
+
 int main() {
     int n, target;
     cout << "Enter number of elements: ";
@@ -49,7 +66,7 @@ int main() {
     cin >> target;
 
     // Check if any two numbers sum to target
-    string result = read(n, arr, target);
+    string result = twoSumReadOptimal(n, arr, target);
     cout << "Is there a pair that sums to target? " << result << endl;
 
     // Find indices of the pair
