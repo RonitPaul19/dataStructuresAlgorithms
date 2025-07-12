@@ -9,7 +9,6 @@ int f(int i, int N){
     f(i+1, N);
 }
 
-
 int main(){
     int n;
 
